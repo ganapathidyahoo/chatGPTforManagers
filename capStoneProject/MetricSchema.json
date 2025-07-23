@@ -1,0 +1,215 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Get metric data",
+    "description": "Retrieves current metric data for a stock.",
+    "version": "v1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://finnhub.io/api/v1"
+    }
+  ],
+  "paths": {
+    "/stock/metric": {
+      "get": {
+        "description": "Get metrics for a specific ticker",
+        "operationId": "GetStockMetrics",
+        "parameters": [
+          {
+            "name": "symbol",
+            "in": "query",
+            "description": "The ticker symbol to retrieve metrics for",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+           {
+            "name": "metric",
+            "in": "all",
+            "description": "Indicates to fetch all metrics",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "token",
+            "in": "cnttf21r01qt3uhjnl10cnttf21r01qt3uhjnl1g",
+            "description": "The token for authentication",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "deprecated": false
+      }
+    }
+
+  },
+  "components": {
+    "schemas": {}
+  }
+}
+
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Get metric data",
+    "description": "Retrieves current metric data for a stock.",
+    "version": "v1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://finnhub.io/api/v1"
+    }
+  ],
+  "paths": {
+    "/stock/metric?symbol={symbol}&metric={metric}&token={token}" : {
+      "get": {
+        "description": "Get metrics for a specific ticker",
+        "operationId": "GetStockMetrics",
+        "parameters": [
+          {
+            "name": "symbol",
+            "in": "query",
+            "description": "The ticker symbol to retrieve metrics for",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+           {
+            "name": "metric",
+            "in": "query",
+            "description": "Indicates to fetch all metrics",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "price",
+              "enum": [ "all","price" ]
+            }
+          },
+          {
+            "name": "token",
+            "in": "query",
+            "description": "The token for authentication",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "cnttf21r01qt3uhjnl10cnttf21r01qt3uhjnl1g",
+              "enum": [ "cnttf21r01qt3uhjnl10cnttf21r01qt3uhjnl1g" ]
+            }
+          }
+        ],
+        "deprecated": false
+      }
+    }
+  },
+  "components": {
+    "schemas": {}
+  }
+}
+
+
+
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Get metric data",
+    "description": "Retrieves current metric data for a stock.",
+    "version": "v1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://finnhub.io/api/v1"
+    }
+  ],
+  "paths": {
+    "/stock/metric?symbol={symbol}&metric={metric}&token={token}" : {
+      "get": {
+        "description": "Get metrics for a specific ticker",
+        "operationId": "GetStockMetrics",
+        "parameters": [
+          {
+            "name": "symbol",
+            "in": "query",
+            "description": "The ticker symbol to retrieve metrics for",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+           {
+            "name": "metric",
+            "in": "query",
+            "description": "Indicates to fetch all metrics",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "price",
+              "enum": [ "all","price" ]
+            }
+          },
+          {
+            "name": "token",
+            "in": "query",
+            "description": "The token for authentication",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "cnttf21r01qt3uhjnl10cnttf21r01qt3uhjnl1g",
+              "enum": [ "cnttf21r01qt3uhjnl10cnttf21r01qt3uhjnl1g" ]
+            }
+          }
+        ],
+        "deprecated": false
+      }
+    },
+   "/stock/quote?symbol={symbol}&token={token}" : {
+      "get": {
+        "description": "Get quote for a specific ticker",
+        "operationId": "GetStockQuote",
+        "parameters": [
+          {
+            "name": "symbol",
+            "in": "query",
+            "description": "The ticker symbol to retrieve metrics for",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+           {
+            "name": "metric",
+            "in": "query",
+            "description": "Indicates to fetch all metrics",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "price",
+              "enum": [ "all","price" ]
+            }
+          },
+          {
+            "name": "token",
+            "in": "query",
+            "description": "The token for authentication",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "cnttf21r01qt3uhjnl10cnttf21r01qt3uhjnl1g",
+              "enum": [ "cnttf21r01qt3uhjnl10cnttf21r01qt3uhjnl1g" ]
+            }
+          }
+        ],
+        "deprecated": false
+      }
+    }
+  },
+  "components": {
+    "schemas": {}
+  }
+}
